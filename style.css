@@ -1,0 +1,35 @@
+body {
+    background: #e7eaf6;
+    
+}
+#header {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+    background-color: #a2a8d3;
+    height: 120px;
+}
+
+#bookList {
+    display: flex;
+    justify-content:flex-start;
+    gap: 30px;
+}
+.book {
+    border: 1px solid black;
+    border-radius: 8px;
+    height: 220px;
+    width: 180px;
+    text-align: center;
+    background-color: #a2a8d3;
+}
+
+#createBook {
+    background-color: #466da9; 
+}
+
+#delete {
+    background-color: #e7eaf6;
+}

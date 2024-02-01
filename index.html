@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header" class="flex-container">
+        <h1>Library</h1>
+        <button id="createBook">Create New Book</button>
+    </div>
+
+    <!--listing books-->
+    <div id="bookList" class="flex-container">
+        <div class="book">
+            <h2 id="bbokTitle">Book Title</h2>
+            <h3 id="bookAuthor">Author</h3>
+            <p id="bookPages">pages</p>
+            <p id="isRead">Reading Status</p>
+            <button id="delete">Delete Book</button>
+        </div>
+    </div>
+
+    <!--Creeating new book records-->
+
+    
+
+        <dialog id="dialog">
+            <form>
+                <label for="title">Title:</label><br>
+                <input type="text" id="title" name="title"><br>
+                <label for="author">Author:</label><br>
+                <input type="text" id="author" name="author"><br>
+                <label for="pages">Pages:</label><br>
+                <input type="text" id="pages" name="author"><br>
+                <label for="pages">Status::</label><br>
+                    <select name="isread" id="isread">
+                        <option value="readit">Read it</option>
+                        <option value="notyet">Not yet</option>
+                    </select><br><br>
+                <button type="submit" id="submit"> Submit</button>
+                <input type="submit" id="js-close" value="Cancel" />
+
+              </form>
+        </dialog>
+    <script src="main.js"></script>
+</body>
+</html>
