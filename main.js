@@ -24,9 +24,6 @@ const myLibrary = [
     }
 ];
 
-
-const create = document.getElementById('submit');
-
 function Book(title, author, pages, isread) {
     //the constructor
         this.title = document.getElementById('title').value;
@@ -39,15 +36,21 @@ function Book(title, author, pages, isread) {
 }
 
 //submitting new book
+const create = document.getElementById('submit');
+
 create.addEventListener("click", function (event) {
-    event.preventDefault();
-        const book = new Book(title, author, pages, isread);
+        event.preventDefault();
+        const book = new Book (title,author, pages, isread);
         myLibrary.push(book);
+        console.log(myLibrary)
 });
 
+//showing books with cards
+
+
+/*
 function addBookToLibrary () {
     //do stuff here
 
 }
-
-console.log(myLibrary);
+*/
