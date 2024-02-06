@@ -16,12 +16,7 @@ jsCloseBtn.addEventListener("click", (e) => {
 //Listing books objects in Library array
 
 const myLibrary = [
-    {
-        title: "Atatürk",
-        author: "İlber Ortaylı",
-        pages: 345,
-        isread: "yes"
-    }
+
 ];
 
 function Book(title, author, pages, isread) {
@@ -43,14 +38,17 @@ create.addEventListener("click", function (event) {
         const book = new Book (title,author, pages, isread);
         myLibrary.push(book);
         console.log(myLibrary)
+        const bookList = document.getElementById('bookList');
+        const bookCard = document.createElement('div');
+        bookCard.className ='book';
+        bookList.appendChild(bookCard);
+        console.log("kitap eklendi.")
+        
 });
 
-//showing books with cards
 
 
-/*
-function addBookToLibrary () {
-    //do stuff here
 
-}
-*/
+
+
+ 
