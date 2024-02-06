@@ -12,12 +12,11 @@ jsCloseBtn.addEventListener("click", (e) => {
   dialog.close();
 });
 
+//Listing book objects in Library array
 
-//Listing books objects in Library array
+const myLibrary = [];
 
-const myLibrary = [
-
-];
+//Book constructor
 
 function Book(title, author, pages, isread) {
     //the constructor
@@ -34,17 +33,39 @@ function Book(title, author, pages, isread) {
 const create = document.getElementById('submit');
 
 create.addEventListener("click", function (event) {
+
+        //adding books to myLibrary array
         event.preventDefault();
         const book = new Book (title,author, pages, isread);
         myLibrary.push(book);
-        console.log(myLibrary)
+
+        //adding book cards to main page
         const bookList = document.getElementById('bookList');
         const bookCard = document.createElement('div');
         bookCard.className ='book';
         bookList.appendChild(bookCard);
-        console.log("kitap eklendi.")
-        
+
+        //adding book info to cards
+        const bookHeader = document.createElement('h2');
+        bookHeader.innerHTML = (title.value);
+        bookCard.appendChild(bookHeader);
+
+        const bookAuthor = document.createElement('h3');
+        bookAuthor.innerHTML = (author.value);
+        bookCard.appendChild(bookAuthor);
+
+        const bookPages = document.createElement('p');
+        bookPages.innerHTML = (pages.value);
+        bookCard.appendChild(bookPages);
+
+        const bookIsread = document.createElement('p');
+        bookIsread.innerHTML = (isread.value);
+        bookCard.appendChild(bookIsread);
+
 });
+
+
+        
 
 
 
