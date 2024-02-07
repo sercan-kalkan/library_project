@@ -1,5 +1,6 @@
 body {
-    background: #e7eaf6;
+    background: #F2EFE5;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
     
 }
 #header {
@@ -7,8 +8,8 @@ body {
     flex-direction: column;
     align-content: center;
     align-items: center;
-    margin-bottom: 40px;
-    background-color: #a2a8d3;
+    margin-bottom: 25px;
+    background-color: #C7C8CC;
     height: 120px;
 }
 
@@ -24,13 +25,20 @@ body {
     height: 220px;
     width: 180px;
     text-align: center;
-    background-color: #a2a8d3;
+    background-color: #C7C8CC;
+}
+
+button {
+    border-radius: 8px;
+    font-size: 14px;
+    padding: 4px;
 }
 
 #createBook {
-    background-color: #466da9; 
+    background-color: #E3E1D9; 
 }
 
-#delete {
-    background-color: #e7eaf6;
+.remove {
+    background-color: #E3E1D9;
 }
+

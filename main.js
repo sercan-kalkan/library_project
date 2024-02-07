@@ -62,6 +62,11 @@ create.addEventListener("click", function (event) {
         bookIsread.innerHTML = (isread.value);
         bookCard.appendChild(bookIsread);
 
+        const removeButton = document.createElement('button');
+        removeButton.innerHTML=("Remove Book");
+        removeButton.className="remove";
+        bookCard.appendChild(removeButton);
+
 });
 
 
