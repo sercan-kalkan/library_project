@@ -43,6 +43,8 @@ create.addEventListener("click", function (event) {
         const bookList = document.getElementById('bookList');
         const bookCard = document.createElement('div');
         bookCard.className ='book';
+        bookCard.setAttribute('data-index',myLibrary.length-1);
+        bookCard.setAttribute('id',myLibrary.length-1);
         bookList.appendChild(bookCard);
 
         //adding book info to cards
@@ -64,13 +66,22 @@ create.addEventListener("click", function (event) {
 
         const removeButton = document.createElement('button');
         removeButton.innerHTML=("Remove Book");
-        removeButton.className="remove";
+        removeButton.setAttribute=("id", "remove");
         bookCard.appendChild(removeButton);
 
 });
 
+//Önce remove butonunu seç
+//Butonun altında olduğu öğeyi seç booklist
+//sonra bu öğenin altındaki kitabı kaldır
+//kitabı arrayden de kaldır
+const removeBookButton = document.getElementById('remove');
 
-        
+removeBookButton.addEventListener('click', () => {
+    const removingBook = removeBookButton.parentNode;
+    const index = removingBook.dataset.index;
+    myLibrary.splice(index,1);
+})
 
 
 

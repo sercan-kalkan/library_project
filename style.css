@@ -40,5 +40,16 @@ button {
 
 .remove {
     background-color: #E3E1D9;
+
+}
+
+#dialog {
+    background-color: #B4B4B8;
+    border-radius: 8px;
+    border-color: #C7C8CC;
+}
+
+input, select {
+    background-color: #E3E1D9;
 }
 
