@@ -66,22 +66,23 @@ create.addEventListener("click", function (event) {
 
         const removeButton = document.createElement('button');
         removeButton.innerHTML=("Remove Book");
-        removeButton.setAttribute=("id", "remove");
-        bookCard.appendChild(removeButton);
+        removeButton.setAttribute("id", "remove");
+        bookCard.appendChild(removeButton).addEventListener('click', () => {
+             const removingBook = removeButton.parentNode;
+             const index = removingBook.dataset.index;
+             myLibrary.splice(index,1);
+             removeButton.parentElement.remove();
+             console.log("remove button works")
+           });
 
 });
 
-//Önce remove butonunu seç
-//Butonun altında olduğu öğeyi seç booklist
-//sonra bu öğenin altındaki kitabı kaldır
-//kitabı arrayden de kaldır
-const removeBookButton = document.getElementById('remove');
 
-removeBookButton.addEventListener('click', () => {
-    const removingBook = removeBookButton.parentNode;
-    const index = removingBook.dataset.index;
-    myLibrary.splice(index,1);
-})
+
+
+
+
+
 
 
 
